@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: nfpservice
+spec:
+  selector:
+    app: nfddeployment
+  ports:
+    - protocol: TCP
+      port: 8080
+      nodePort: 32145
+  type: NodePort
